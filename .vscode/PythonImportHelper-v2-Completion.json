@@ -1,0 +1,347 @@
+[
+    {
+        "label": "scrapy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "scrapy",
+        "description": "scrapy",
+        "detail": "scrapy",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "importPath": "scrapy",
+        "description": "scrapy",
+        "isExtraImport": true,
+        "detail": "scrapy",
+        "documentation": {}
+    },
+    {
+        "label": "signals",
+        "importPath": "scrapy",
+        "description": "scrapy",
+        "isExtraImport": true,
+        "detail": "scrapy",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "furl",
+        "importPath": "furl",
+        "description": "furl",
+        "isExtraImport": true,
+        "detail": "furl",
+        "documentation": {}
+    },
+    {
+        "label": "is_item",
+        "importPath": "itemadapter",
+        "description": "itemadapter",
+        "isExtraImport": true,
+        "detail": "itemadapter",
+        "documentation": {}
+    },
+    {
+        "label": "ItemAdapter",
+        "importPath": "itemadapter",
+        "description": "itemadapter",
+        "isExtraImport": true,
+        "detail": "itemadapter",
+        "documentation": {}
+    },
+    {
+        "label": "ItemAdapter",
+        "importPath": "itemadapter",
+        "description": "itemadapter",
+        "isExtraImport": true,
+        "detail": "itemadapter",
+        "documentation": {}
+    },
+    {
+        "label": "SuppliersSpider",
+        "kind": 6,
+        "importPath": "supplierss.spiders.fasteignir_spider",
+        "description": "supplierss.spiders.fasteignir_spider",
+        "peekOfCode": "class SuppliersSpider(scrapy.Spider):\n    name = \"fasteignir\"\n    custom_settings = {\n        'FEEDS': {\n            'fasteignir.csv': {\n                'format': 'csv',\n                'encoding': 'utf-8-sig',\n                'overwrite': True,\n            },\n        },",
+        "detail": "supplierss.spiders.fasteignir_spider",
+        "documentation": {}
+    },
+    {
+        "label": "SupplierssItem",
+        "kind": 6,
+        "importPath": "supplierss.items",
+        "description": "supplierss.items",
+        "peekOfCode": "class SupplierssItem(scrapy.Item):\n    # define the fields for your item here like:\n    # name = scrapy.Field()\n    pass",
+        "detail": "supplierss.items",
+        "documentation": {}
+    },
+    {
+        "label": "SupplierssSpiderMiddleware",
+        "kind": 6,
+        "importPath": "supplierss.middlewares",
+        "description": "supplierss.middlewares",
+        "peekOfCode": "class SupplierssSpiderMiddleware:\n    # Not all methods need to be defined. If a method is not defined,\n    # scrapy acts as if the spider middleware does not modify the\n    # passed objects.\n    @classmethod\n    def from_crawler(cls, crawler):\n        # This method is used by Scrapy to create your spiders.\n        s = cls()\n        crawler.signals.connect(s.spider_opened, signal=signals.spider_opened)\n        return s",
+        "detail": "supplierss.middlewares",
+        "documentation": {}
+    },
+    {
+        "label": "SupplierssDownloaderMiddleware",
+        "kind": 6,
+        "importPath": "supplierss.middlewares",
+        "description": "supplierss.middlewares",
+        "peekOfCode": "class SupplierssDownloaderMiddleware:\n    # Not all methods need to be defined. If a method is not defined,\n    # scrapy acts as if the downloader middleware does not modify the\n    # passed objects.\n    @classmethod\n    def from_crawler(cls, crawler):\n        # This method is used by Scrapy to create your spiders.\n        s = cls()\n        crawler.signals.connect(s.spider_opened, signal=signals.spider_opened)\n        return s",
+        "detail": "supplierss.middlewares",
+        "documentation": {}
+    },
+    {
+        "label": "SupplierssPipeline",
+        "kind": 6,
+        "importPath": "supplierss.pipelines",
+        "description": "supplierss.pipelines",
+        "peekOfCode": "class SupplierssPipeline:\n    def process_item(self, item, spider):\n        return item",
+        "detail": "supplierss.pipelines",
+        "documentation": {}
+    },
+    {
+        "label": "BOT_NAME",
+        "kind": 5,
+        "importPath": "supplierss.settings",
+        "description": "supplierss.settings",
+        "peekOfCode": "BOT_NAME = 'supplierss'\nSPIDER_MODULES = ['supplierss.spiders']\nNEWSPIDER_MODULE = 'supplierss.spiders'\n# Crawl responsibly by identifying yourself (and your website) on the user-agent\n#USER_AGENT = 'supplierss (+http://www.yourdomain.com)'\n# Obey robots.txt rules\nROBOTSTXT_OBEY = True\n# Configure maximum concurrent requests performed by Scrapy (default: 16)\n#CONCURRENT_REQUESTS = 32\n# Configure a delay for requests for the same website (default: 0)",
+        "detail": "supplierss.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SPIDER_MODULES",
+        "kind": 5,
+        "importPath": "supplierss.settings",
+        "description": "supplierss.settings",
+        "peekOfCode": "SPIDER_MODULES = ['supplierss.spiders']\nNEWSPIDER_MODULE = 'supplierss.spiders'\n# Crawl responsibly by identifying yourself (and your website) on the user-agent\n#USER_AGENT = 'supplierss (+http://www.yourdomain.com)'\n# Obey robots.txt rules\nROBOTSTXT_OBEY = True\n# Configure maximum concurrent requests performed by Scrapy (default: 16)\n#CONCURRENT_REQUESTS = 32\n# Configure a delay for requests for the same website (default: 0)\n# See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay",
+        "detail": "supplierss.settings",
+        "documentation": {}
+    },
+    {
+        "label": "NEWSPIDER_MODULE",
+        "kind": 5,
+        "importPath": "supplierss.settings",
+        "description": "supplierss.settings",
+        "peekOfCode": "NEWSPIDER_MODULE = 'supplierss.spiders'\n# Crawl responsibly by identifying yourself (and your website) on the user-agent\n#USER_AGENT = 'supplierss (+http://www.yourdomain.com)'\n# Obey robots.txt rules\nROBOTSTXT_OBEY = True\n# Configure maximum concurrent requests performed by Scrapy (default: 16)\n#CONCURRENT_REQUESTS = 32\n# Configure a delay for requests for the same website (default: 0)\n# See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay\n# See also autothrottle settings and docs",
+        "detail": "supplierss.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#USER_AGENT",
+        "kind": 5,
+        "importPath": "supplierss.settings",
+        "description": "supplierss.settings",
+        "peekOfCode": "#USER_AGENT = 'supplierss (+http://www.yourdomain.com)'\n# Obey robots.txt rules\nROBOTSTXT_OBEY = True\n# Configure maximum concurrent requests performed by Scrapy (default: 16)\n#CONCURRENT_REQUESTS = 32\n# Configure a delay for requests for the same website (default: 0)\n# See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay\n# See also autothrottle settings and docs\n#DOWNLOAD_DELAY = 3\n# The download delay setting will honor only one of:",
+        "detail": "supplierss.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROBOTSTXT_OBEY",
+        "kind": 5,
+        "importPath": "supplierss.settings",
+        "description": "supplierss.settings",
+        "peekOfCode": "ROBOTSTXT_OBEY = True\n# Configure maximum concurrent requests performed by Scrapy (default: 16)\n#CONCURRENT_REQUESTS = 32\n# Configure a delay for requests for the same website (default: 0)\n# See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay\n# See also autothrottle settings and docs\n#DOWNLOAD_DELAY = 3\n# The download delay setting will honor only one of:\n#CONCURRENT_REQUESTS_PER_DOMAIN = 16\n#CONCURRENT_REQUESTS_PER_IP = 16",
+        "detail": "supplierss.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#CONCURRENT_REQUESTS",
+        "kind": 5,
+        "importPath": "supplierss.settings",
+        "description": "supplierss.settings",
+        "peekOfCode": "#CONCURRENT_REQUESTS = 32\n# Configure a delay for requests for the same website (default: 0)\n# See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay\n# See also autothrottle settings and docs\n#DOWNLOAD_DELAY = 3\n# The download delay setting will honor only one of:\n#CONCURRENT_REQUESTS_PER_DOMAIN = 16\n#CONCURRENT_REQUESTS_PER_IP = 16\n# Disable cookies (enabled by default)\n#COOKIES_ENABLED = False",
+        "detail": "supplierss.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#DOWNLOAD_DELAY",
+        "kind": 5,
+        "importPath": "supplierss.settings",
+        "description": "supplierss.settings",
+        "peekOfCode": "#DOWNLOAD_DELAY = 3\n# The download delay setting will honor only one of:\n#CONCURRENT_REQUESTS_PER_DOMAIN = 16\n#CONCURRENT_REQUESTS_PER_IP = 16\n# Disable cookies (enabled by default)\n#COOKIES_ENABLED = False\n# Disable Telnet Console (enabled by default)\n#TELNETCONSOLE_ENABLED = False\n# Override the default request headers:\n#DEFAULT_REQUEST_HEADERS = {",
+        "detail": "supplierss.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#CONCURRENT_REQUESTS_PER_DOMAIN",
+        "kind": 5,
+        "importPath": "supplierss.settings",
+        "description": "supplierss.settings",
+        "peekOfCode": "#CONCURRENT_REQUESTS_PER_DOMAIN = 16\n#CONCURRENT_REQUESTS_PER_IP = 16\n# Disable cookies (enabled by default)\n#COOKIES_ENABLED = False\n# Disable Telnet Console (enabled by default)\n#TELNETCONSOLE_ENABLED = False\n# Override the default request headers:\n#DEFAULT_REQUEST_HEADERS = {\n#   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',\n#   'Accept-Language': 'en',",
+        "detail": "supplierss.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#CONCURRENT_REQUESTS_PER_IP",
+        "kind": 5,
+        "importPath": "supplierss.settings",
+        "description": "supplierss.settings",
+        "peekOfCode": "#CONCURRENT_REQUESTS_PER_IP = 16\n# Disable cookies (enabled by default)\n#COOKIES_ENABLED = False\n# Disable Telnet Console (enabled by default)\n#TELNETCONSOLE_ENABLED = False\n# Override the default request headers:\n#DEFAULT_REQUEST_HEADERS = {\n#   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',\n#   'Accept-Language': 'en',\n#}",
+        "detail": "supplierss.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#COOKIES_ENABLED",
+        "kind": 5,
+        "importPath": "supplierss.settings",
+        "description": "supplierss.settings",
+        "peekOfCode": "#COOKIES_ENABLED = False\n# Disable Telnet Console (enabled by default)\n#TELNETCONSOLE_ENABLED = False\n# Override the default request headers:\n#DEFAULT_REQUEST_HEADERS = {\n#   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',\n#   'Accept-Language': 'en',\n#}\n# Enable or disable spider middlewares\n# See https://docs.scrapy.org/en/latest/topics/spider-middleware.html",
+        "detail": "supplierss.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#TELNETCONSOLE_ENABLED",
+        "kind": 5,
+        "importPath": "supplierss.settings",
+        "description": "supplierss.settings",
+        "peekOfCode": "#TELNETCONSOLE_ENABLED = False\n# Override the default request headers:\n#DEFAULT_REQUEST_HEADERS = {\n#   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',\n#   'Accept-Language': 'en',\n#}\n# Enable or disable spider middlewares\n# See https://docs.scrapy.org/en/latest/topics/spider-middleware.html\n#SPIDER_MIDDLEWARES = {\n#    'supplierss.middlewares.SupplierssSpiderMiddleware': 543,",
+        "detail": "supplierss.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#DEFAULT_REQUEST_HEADERS",
+        "kind": 5,
+        "importPath": "supplierss.settings",
+        "description": "supplierss.settings",
+        "peekOfCode": "#DEFAULT_REQUEST_HEADERS = {\n#   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',\n#   'Accept-Language': 'en',\n#}\n# Enable or disable spider middlewares\n# See https://docs.scrapy.org/en/latest/topics/spider-middleware.html\n#SPIDER_MIDDLEWARES = {\n#    'supplierss.middlewares.SupplierssSpiderMiddleware': 543,\n#}\n# Enable or disable downloader middlewares",
+        "detail": "supplierss.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#SPIDER_MIDDLEWARES",
+        "kind": 5,
+        "importPath": "supplierss.settings",
+        "description": "supplierss.settings",
+        "peekOfCode": "#SPIDER_MIDDLEWARES = {\n#    'supplierss.middlewares.SupplierssSpiderMiddleware': 543,\n#}\n# Enable or disable downloader middlewares\n# See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html\n#DOWNLOADER_MIDDLEWARES = {\n#    'supplierss.middlewares.SupplierssDownloaderMiddleware': 543,\n#}\n# Enable or disable extensions\n# See https://docs.scrapy.org/en/latest/topics/extensions.html",
+        "detail": "supplierss.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#DOWNLOADER_MIDDLEWARES",
+        "kind": 5,
+        "importPath": "supplierss.settings",
+        "description": "supplierss.settings",
+        "peekOfCode": "#DOWNLOADER_MIDDLEWARES = {\n#    'supplierss.middlewares.SupplierssDownloaderMiddleware': 543,\n#}\n# Enable or disable extensions\n# See https://docs.scrapy.org/en/latest/topics/extensions.html\n#EXTENSIONS = {\n#    'scrapy.extensions.telnet.TelnetConsole': None,\n#}\n# Configure item pipelines\n# See https://docs.scrapy.org/en/latest/topics/item-pipeline.html",
+        "detail": "supplierss.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#EXTENSIONS",
+        "kind": 5,
+        "importPath": "supplierss.settings",
+        "description": "supplierss.settings",
+        "peekOfCode": "#EXTENSIONS = {\n#    'scrapy.extensions.telnet.TelnetConsole': None,\n#}\n# Configure item pipelines\n# See https://docs.scrapy.org/en/latest/topics/item-pipeline.html\n#ITEM_PIPELINES = {\n#    'supplierss.pipelines.SupplierssPipeline': 300,\n#}\n# Enable and configure the AutoThrottle extension (disabled by default)\n# See https://docs.scrapy.org/en/latest/topics/autothrottle.html",
+        "detail": "supplierss.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#ITEM_PIPELINES",
+        "kind": 5,
+        "importPath": "supplierss.settings",
+        "description": "supplierss.settings",
+        "peekOfCode": "#ITEM_PIPELINES = {\n#    'supplierss.pipelines.SupplierssPipeline': 300,\n#}\n# Enable and configure the AutoThrottle extension (disabled by default)\n# See https://docs.scrapy.org/en/latest/topics/autothrottle.html\n#AUTOTHROTTLE_ENABLED = True\n# The initial download delay\n#AUTOTHROTTLE_START_DELAY = 5\n# The maximum download delay to be set in case of high latencies\n#AUTOTHROTTLE_MAX_DELAY = 60",
+        "detail": "supplierss.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#AUTOTHROTTLE_ENABLED",
+        "kind": 5,
+        "importPath": "supplierss.settings",
+        "description": "supplierss.settings",
+        "peekOfCode": "#AUTOTHROTTLE_ENABLED = True\n# The initial download delay\n#AUTOTHROTTLE_START_DELAY = 5\n# The maximum download delay to be set in case of high latencies\n#AUTOTHROTTLE_MAX_DELAY = 60\n# The average number of requests Scrapy should be sending in parallel to\n# each remote server\n#AUTOTHROTTLE_TARGET_CONCURRENCY = 1.0\n# Enable showing throttling stats for every response received:\n#AUTOTHROTTLE_DEBUG = False",
+        "detail": "supplierss.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#AUTOTHROTTLE_START_DELAY",
+        "kind": 5,
+        "importPath": "supplierss.settings",
+        "description": "supplierss.settings",
+        "peekOfCode": "#AUTOTHROTTLE_START_DELAY = 5\n# The maximum download delay to be set in case of high latencies\n#AUTOTHROTTLE_MAX_DELAY = 60\n# The average number of requests Scrapy should be sending in parallel to\n# each remote server\n#AUTOTHROTTLE_TARGET_CONCURRENCY = 1.0\n# Enable showing throttling stats for every response received:\n#AUTOTHROTTLE_DEBUG = False\n# Enable and configure HTTP caching (disabled by default)\n# See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings",
+        "detail": "supplierss.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#AUTOTHROTTLE_MAX_DELAY",
+        "kind": 5,
+        "importPath": "supplierss.settings",
+        "description": "supplierss.settings",
+        "peekOfCode": "#AUTOTHROTTLE_MAX_DELAY = 60\n# The average number of requests Scrapy should be sending in parallel to\n# each remote server\n#AUTOTHROTTLE_TARGET_CONCURRENCY = 1.0\n# Enable showing throttling stats for every response received:\n#AUTOTHROTTLE_DEBUG = False\n# Enable and configure HTTP caching (disabled by default)\n# See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings\n#HTTPCACHE_ENABLED = True\n#HTTPCACHE_EXPIRATION_SECS = 0",
+        "detail": "supplierss.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#AUTOTHROTTLE_TARGET_CONCURRENCY",
+        "kind": 5,
+        "importPath": "supplierss.settings",
+        "description": "supplierss.settings",
+        "peekOfCode": "#AUTOTHROTTLE_TARGET_CONCURRENCY = 1.0\n# Enable showing throttling stats for every response received:\n#AUTOTHROTTLE_DEBUG = False\n# Enable and configure HTTP caching (disabled by default)\n# See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings\n#HTTPCACHE_ENABLED = True\n#HTTPCACHE_EXPIRATION_SECS = 0\n#HTTPCACHE_DIR = 'httpcache'\n#HTTPCACHE_IGNORE_HTTP_CODES = []\n#HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'",
+        "detail": "supplierss.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#AUTOTHROTTLE_DEBUG",
+        "kind": 5,
+        "importPath": "supplierss.settings",
+        "description": "supplierss.settings",
+        "peekOfCode": "#AUTOTHROTTLE_DEBUG = False\n# Enable and configure HTTP caching (disabled by default)\n# See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings\n#HTTPCACHE_ENABLED = True\n#HTTPCACHE_EXPIRATION_SECS = 0\n#HTTPCACHE_DIR = 'httpcache'\n#HTTPCACHE_IGNORE_HTTP_CODES = []\n#HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'",
+        "detail": "supplierss.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#HTTPCACHE_ENABLED",
+        "kind": 5,
+        "importPath": "supplierss.settings",
+        "description": "supplierss.settings",
+        "peekOfCode": "#HTTPCACHE_ENABLED = True\n#HTTPCACHE_EXPIRATION_SECS = 0\n#HTTPCACHE_DIR = 'httpcache'\n#HTTPCACHE_IGNORE_HTTP_CODES = []\n#HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'",
+        "detail": "supplierss.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#HTTPCACHE_EXPIRATION_SECS",
+        "kind": 5,
+        "importPath": "supplierss.settings",
+        "description": "supplierss.settings",
+        "peekOfCode": "#HTTPCACHE_EXPIRATION_SECS = 0\n#HTTPCACHE_DIR = 'httpcache'\n#HTTPCACHE_IGNORE_HTTP_CODES = []\n#HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'",
+        "detail": "supplierss.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#HTTPCACHE_DIR",
+        "kind": 5,
+        "importPath": "supplierss.settings",
+        "description": "supplierss.settings",
+        "peekOfCode": "#HTTPCACHE_DIR = 'httpcache'\n#HTTPCACHE_IGNORE_HTTP_CODES = []\n#HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'",
+        "detail": "supplierss.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#HTTPCACHE_IGNORE_HTTP_CODES",
+        "kind": 5,
+        "importPath": "supplierss.settings",
+        "description": "supplierss.settings",
+        "peekOfCode": "#HTTPCACHE_IGNORE_HTTP_CODES = []\n#HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'",
+        "detail": "supplierss.settings",
+        "documentation": {}
+    },
+    {
+        "label": "#HTTPCACHE_STORAGE",
+        "kind": 5,
+        "importPath": "supplierss.settings",
+        "description": "supplierss.settings",
+        "peekOfCode": "#HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'",
+        "detail": "supplierss.settings",
+        "documentation": {}
+    }
+]

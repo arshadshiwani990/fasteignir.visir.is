@@ -1,0 +1,45 @@
+[
+    {
+        "label": "scrapy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "scrapy",
+        "description": "scrapy",
+        "detail": "scrapy",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "importPath": "scrapy",
+        "description": "scrapy",
+        "isExtraImport": true,
+        "detail": "scrapy",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "furl",
+        "importPath": "furl",
+        "description": "furl",
+        "isExtraImport": true,
+        "detail": "furl",
+        "documentation": {}
+    },
+    {
+        "label": "SuppliersSpider",
+        "kind": 6,
+        "importPath": "fasteignir_spider",
+        "description": "fasteignir_spider",
+        "peekOfCode": "class SuppliersSpider(scrapy.Spider):\n    name = \"fasteignir\"\n    custom_settings = {\n        'FEEDS': {\n            'fasteignir.csv': {\n                'format': 'csv',\n                'encoding': 'utf-8-sig',\n                'overwrite': True,\n            },\n        },",
+        "detail": "fasteignir_spider",
+        "documentation": {}
+    }
+]
